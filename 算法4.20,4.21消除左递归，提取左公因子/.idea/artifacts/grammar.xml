@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="grammar">
+    <output-path>$PROJECT_DIR$/../GrammarJar</output-path>
+    <root id="archive" name="grammar.jar">
+      <element id="dir-copy" path="$PROJECT_DIR$/out/production/算法4.20，4.21消除左递归，提取左公因子" />
+    </root>
+  </artifact>
+</component>

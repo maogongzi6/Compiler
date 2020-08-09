@@ -1,0 +1,113 @@
+    void determineTheOrigin(LRGrammar.SetOfItems item_0) {
+        for (Map.Entry<Nonterminal,ArrayList<LRGrammar.Pair>> entry_0 : item_0.originalExpression.entrySet()) {
+            for (LRGrammar.Pair pair_0 : entry_0.getValue()) {                                                              //由于我们设计的原因，如果想对每个式子操作就必须要使用双层循环
+                LR_1.SetOfItems item_1 = lr_1.new SetOfItems(entry_0.getKey(), pair_0.idOfSentence,pair_0.dotPos,Terminal.spread);//这里用文中的#（就是这里的spread）构造LR_1 item对其求closure
+                for (Map.Entry<Nonterminal,ArrayList<LR_1.Pair>> entry_1 : item_1.beginToSentencePair.entrySet()) {
+                    for (LR_1.Pair pair_1 : entry_1.getValue()) {                                                               //对于LR_1 item中的每个句子判断
+                        if (pair_1.dotPos!=lr_1.LRGrammar.getById(pair_1.idOfSentence).size()) {                                //如果·不在句末
+                            LRGrammar.SetOfItems i = item_0.getItemFromLR_1(item_1);
+                            //LRGrammar.SetOfItems i1 = lrGrammar.dfaMaker.move(item_0.getItemFromLR_1(item_1),pair_1.wordAtDot());
+                            Integer targetId = lrGrammar.dfaMaker.getNodeId(lrGrammar.dfaMaker.move(item_0,pair_1.wordAtDot()));
+                            if (pair_1.next != Terminal.spread) {                                                               //如果next不是#，判定targetId中的next是自发生成，完善自发生成表
+                                setItemIdToLookForward.get(targetId).add(pair_1.next);
+                            }
+                            else {                                                                                          //传播的到，填写传播表
+                                Integer beginId = lrGrammar.dfaMaker.getNodeId(item_0);
+                                if (!lookForwardSpread.containsKey(beginId))
+                                    lookForwardSpread.put(beginId,new HashSet<>());
+                                lookForwardSpread.get(beginId).add(targetId);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+
+
+
+import java.util.*;
+
+public class LALR {
+    LALR(LRGrammar lrg) {
+        lrGrammar = lrg; lr_1 = new LR_1(lrg.lrGrammar);
+        lrGrammar.items();                                                                                      //书中的第一步，构建LR_0在这里，因为接下来要用到dfa属性
+        for (int count = 0;count<lrg.dfaMaker.getNodeNum();++count)
+            setItemIdToLookForward.add(new HashSet<>());
+    }
+
+    void calculateLALR() {
+                                                                                        //第一步在初始化时完成
+        for (int count = 0;count<lrGrammar.dfaMaker.getNodeNum();++count) {
+            LRGrammar.SetOfItems item_0 = lrGrammar.dfaMaker.getNode(count);
+            determineTheOrigin(item_0);                                                 //对每个item操作
+        }
+        setItemIdToLookForward.get(lrGrammar.dfaMaker.getStartId()).add(Terminal.end);
+        boolean ifChanged;
+        do {                                                                                    //这里是传播符号
+            ifChanged = false;
+            for (int pos = 0;pos<setItemIdToLookForward.size();++pos) {
+                if (lookForwardSpread.get(pos)!=null)
+                for (Integer target : lookForwardSpread.get(pos))
+                    ifChanged = setItemIdToLookForward.get(target).addAll(setItemIdToLookForward.get(pos)) || ifChanged;
+            }
+        } while (ifChanged);
+    }
+
+    void determineTheOrigin(LRGrammar.SetOfItems item_0) {
+        for (Relation_0 relation: item_0.originalRelation) {
+                LR_1.SetOfItems item_1 = lr_1.new SetOfItems(relation,relation.dotPos,Terminal.spread);//这里用文中的#（就是这里的spread）构造LR_1 item对其求closure
+                    for (Relation_1 relation_1: item_1.relationSet) {
+                        if (relation_1.dotPos!=relation_1.productionLength()) {                                //如果·不在句末
+                            LRGrammar.SetOfItems i = item_0.getItemFromLR_1(item_1);
+                            Integer targetId = lrGrammar.dfaMaker.getNodeId(lrGrammar.dfaMaker.move(item_0,relation_1.wordAtDot()));
+                            if (relation_1.next != Terminal.spread) {                                                               //如果next不是#，判定targetId中的next是自发生成，完善自发生成表
+                                setItemIdToLookForward.get(targetId).add(relation_1.next);
+                            }
+                            else {                                                                                          //传播的到，填写传播表
+                                Integer beginId = lrGrammar.dfaMaker.getNodeId(item_0);
+                                if (!lookForwardSpread.containsKey(beginId))
+                                    lookForwardSpread.put(beginId,new HashSet<>());
+                                lookForwardSpread.get(beginId).add(targetId);
+                            }
+                        }
+                    }
+                }
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder builder = new StringBuilder();
+        builder.append(lrGrammar).append("\n");
+        builder.append("lookForward:  \n");
+        for (int pos = 0;pos<setItemIdToLookForward.size();++pos) {
+            builder.append(pos).append(": ");
+            builder.append(setItemIdToLookForward.get(pos)).append("\n");
+        }
+        builder.append("spread:  \n");
+        for (Map.Entry<Integer,HashSet<Integer>> entry : lookForwardSpread.entrySet()) {
+            builder.append(entry.getKey()).append(": ");
+            for (Integer i : entry.getValue())
+                builder.append(entry.getValue()).append("\n");
+        }
+        return builder.toString();
+    }
+
+    public static void main(String[] args) {
+        ArrayList<String> nonTerms = new ArrayList<>(List.of("S","L","R")), terms = new ArrayList<>(List.of("i","*","=")),
+                begins = new ArrayList<>(List.of("S","S","L","L","R")),ends = new ArrayList<>(List.of("L=R","R","*R","i","L"));
+        Grammar grammar = new Grammar(terms,nonTerms,begins,ends);
+        LRGrammar lrGrammar = new LRGrammar(grammar);
+        LALR lalr = new LALR(lrGrammar);
+        //System.out.print(lalr.lrGrammar);
+        lalr.calculateLALR();
+        System.out.print(lalr);
+    }
+
+    LRGrammar lrGrammar;
+    LR_1 lr_1;
+    ArrayList<HashSet<Terminal>> setItemIdToLookForward = new ArrayList<>();
+    HashMap<Integer,HashSet<Integer>> lookForwardSpread = new HashMap<>();
+}

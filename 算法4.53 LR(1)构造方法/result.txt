@@ -1,0 +1,26 @@
+LDReax,4
+LDR ebx,8
++ eax,ebx
+STO_T 0,eax
+LDR_T ecx,4
+STO 0,ecx
+LDR_T edx,8
+STO 0,edx
+LDR_T ebx,12
+STO 0,ebx
+LDR_T ecx,4
+LDR_T ecx,16
+STO 0,ecx
+LDR_T edx,8
+LDR_T edx,0
+STO 0,edx
+LDR_T eax,28
+STO_T 20,eax
+RESET -12
+PUSH 4
+LDR_T ecx,4
+PUSH 0
+LDR_T edx,8
+LDR_T edx
+GOTO edx
+RET

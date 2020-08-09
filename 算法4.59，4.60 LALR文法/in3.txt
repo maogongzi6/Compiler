@@ -1,0 +1,28 @@
+int main() {
+    int a;
+    int c;
+    if (a>c) {
+            int x;
+            int z;
+            int t;
+            int m;
+            int r;
+            if (r >= a) {
+            m = z + x ;
+            x = z + t ;
+            x = z + t ;
+                while (a==c) {
+                    int b;
+                    a = a + a;
+                    x = x + t ;
+                    b = z + t ;
+                }
+                x = x + x ;
+            }
+            else {x = z + t ;x = z + t ;a = t + c;}
+            x = z + t ;x = z + t ;x = z + t ;x = z + t ;x = z + t ;
+        }
+
+
+    return 0;
+}

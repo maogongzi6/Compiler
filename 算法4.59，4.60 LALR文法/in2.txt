@@ -1,0 +1,9 @@
+int main() {
+    int[5][6] a;
+    int[5][7] c;
+    func(a,c);
+}
+    void func(int [][6]a,int [][7]c) {
+    func(a,c);
+    return;
+    }

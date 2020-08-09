@@ -1,0 +1,31 @@
+import java.util.Random;
+
+/*public interface WordWithCode {
+}
+
+class TerminalWithCode implements WordWithCode {
+    TerminalWithCode(Terminal t) {term = t; rand = (new Random()).nextInt(100);}
+
+    @Override
+    public String toString() {
+        return "(" + term + Integer.toString(rand) + ")";
+    }
+
+    public static void main(String[] args) {
+        System.out.println(TerminalWithCode.class);
+    }
+    Terminal term;
+    int rand;
+}
+
+class NonTermWithCode implements WordWithCode {
+    NonTermWithCode(Nonterminal nT) {nonTerm = nT; rand = (new Random()).nextInt(100);}
+    @Override
+    public String toString() {
+        return "("+nonTerm + Integer.toString(rand)+")";
+    }
+
+    Nonterminal nonTerm;
+    int rand;
+}
+*/

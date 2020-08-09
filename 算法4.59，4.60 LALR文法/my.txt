@@ -1,0 +1,32 @@
+<Main>~<FunctionList>
+<FunctionList>~<FunctionList><Function> $ <Function>
+<Function>~<ReturnType>[identity]{func_1}[(]<ParameterList>[)]<FunctionBrace>{func_3}$[int] [main] [(][)] <FunctionBrace>
+<ParameterList>~<FuncParameter>[,]<ParameterList>{func_1} $ <FuncParameter>{func_1}
+<FuncParameter>~<ParamType>{func_1}<ArrayDeclare>[identity]{func_2}$<ParamType>[identity]{func_3}
+<ArrayDeclare>~{func_3}<ArrayDeclare>[[][integer][\]{func_2} $ [[][\]{func_1}
+<Parameter>~<ParamType>{func_1}<ArrayProperty>[identity]{func_2}
+<ArrayProperty>~[[][integer]][\]{func_1}<ArrayProperty>{func_2} $ <IPSLON>{func_3}
+<SentencesList>~<SentencesList><M><Sentences>{func_1} $ <Sentences>{func_2}
+<Sentences>~<Definition>{func_1} $ <Assignment>{func_1} $ <For>{func_1} $ <While>{func_1} $ <If>{func_1} $ <Brace>{func_1} $ <Func>[;] $ {func_2}<Return>[;]{func_3}
+<Return>~[return]{func_1} $ [return][identity]{func_2} $ [return][integer]{func_3} $ [return][character]{func_4} $ [return][string]
+<Definition>~<Parameter>[;]{func_1}
+<Assignment>~[identity][=]<FirstExp>[;]{func_1} $ <ArrayAssign>[=]<FirstExp>[;]{func_2}
+<ArrayAssign>~[identity][[]<FirstExp>[\]{func_1} $ <ArrayAssign>[[]<FirstExp>[\]{func_2}
+<FirstExp>~<FirstExp>[+]<SecondExp>{func_1} $ <FirstExp>[-]<SecondExp>{func_1} $ <SecondExp>{func_2}
+<SecondExp>~<SecondExp>[*]<ThirdExp>{func_1} $ <SecondExp>[/]<ThirdExp>{func_1} $ <ThirdExp>{func_2}
+<ThirdExp>~[-]<ThirdExp>{func_1} $ [(]<FirstExp>[)]{func_2} $ [integer]{func_3} $ [character]{func_4} $ [stringCharacter] $ [identity]{func_5} $ <ArrayAssign>{func_6} $ <Func>
+<For>~[for][(]<Assignment><ComparationList>[;]<Assignment>[)]<Brace>
+<While>~[while]<M>[(]<ComparationList>[)]<M><Brace>{func_1}
+<If>~<If_1>{func_1} $ <If_2>{func_1}
+<If_1>~[if][(]<ComparationList>[)]<M><Brace>{func_1}
+<If_2>~[if][(]<ComparationList>[)]<M><Brace>{func_2}[else]<M><Brace>{func_1}
+<ParamType>~[int]{func_1} $ [char]{func_1} $ [string]
+<ReturnType>~[void] $ [int] $ [char] $ [string]
+<ComparationList>~<ComparationList>[||]<M><Comparation>{func_2} $ <ComparationList>[&&]<M><Comparation>{func_1} $ <Comparation>{func_3}
+<Comparation>~[identity]<Compare>[identity]{func_1} $ [!]<Comparation>{func_2} $ [(]<ComparationList>[)]{func_3} $ [true]{func_4} $ [false]{func_5}
+<Compare>~[>] $ [<] $ [<=] $ [>=] $ [==] $ [!=]
+<Brace>~[{]{func_1}[pointer]<SentencesList>[}]{func_2}
+<FunctionBrace>~[{][pointer]<SentencesList>[}]
+<M>~<IPSLON>{func_1}
+<Func>~[identity]{func_1}[(]<InputList>[)]{func_2}
+<InputList>~<InputList>[,][integer]{func_1} $ <InputList>[,][character]{func_2} $ <InputList>[,][string] $ <InputList>[,][identity]{func_3} $ [integer]{func_4} $ [character]{func_5} $ [stringCharacter] $ [identity]{func_6}

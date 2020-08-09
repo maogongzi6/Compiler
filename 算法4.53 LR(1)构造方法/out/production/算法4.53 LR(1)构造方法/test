@@ -1,0 +1,88 @@
+
+
+        SetOfItems formClosure(Nonterminal nonTerm,Pair originalPair) {
+            class MyHashMap {
+                boolean specialPut(Nonterminal nonTerm, Integer sentenceId,Terminal next) {
+                    Pair pair = new Pair(sentenceId,0,next);
+                    if (!containsPair(nonTerm,pair)) {
+                        if (get(nonTerm) == null)
+                            put(nonTerm, new ArrayList<>());
+                        return get(nonTerm).add(pair);
+                    }
+                    return false;
+                }
+                ArrayList<Pair> get(Nonterminal nonTerm) {return map.get(nonTerm); }
+                void put(Nonterminal nonTerm,ArrayList<Pair> pairs) {map.put(nonTerm,pairs); }
+                boolean isEmpty() {return map.isEmpty(); }
+
+                HashMap<Nonterminal,ArrayList<Pair>> map = new HashMap<>();
+            }
+            HashMap<Nonterminal,ArrayList<Pair>> tempMap_1 = new HashMap<>() {{put(nonTerm,new ArrayList<>(){{add(originalPair);}});}};
+            MyHashMap tempMap_2;
+            boolean ifChanged;
+            do {
+                ifChanged = false;
+                tempMap_2 = new MyHashMap();
+                for (Map.Entry<Nonterminal, ArrayList<Pair>> entry : tempMap_1.entrySet()) {
+                    ArrayList<Pair> pairs = entry.getValue();
+                    for (Pair pair : pairs) {
+                        Word theWord = pair.wordAtDot();
+                        if (!(theWord==null||theWord.isTerminal() || theWord.isIpslon()))
+                            for (ArrayList<Word> sentence : ((Nonterminal) theWord).derivation) {
+                                ArrayList<Word> sentenceNow = LRGrammar.getById(pair.idOfSentence);
+                                ArrayList<Word> beta_a = new ArrayList<>(sentenceNow.subList(pair.dotPos+1,sentenceNow.size()));
+                                beta_a.add(pair.next);
+                                for (Terminal next : LRGrammar.getFirst(beta_a))
+                                    tempMap_2.specialPut((Nonterminal) theWord, LRGrammar.getBySentence(sentence),next);
+                            }
+                    }
+                }
+                tempMap_1 = tempMap_2.map;
+                for (Map.Entry<Nonterminal,ArrayList<Pair>> entry : tempMap_1.entrySet())
+                    for (Pair pair : entry.getValue())
+                        ifChanged = add(entry.getKey(), pair.idOfSentence,pair.dotPos,pair.next) || ifChanged;
+            } while (ifChanged);
+            return this;
+        }
+
+
+        HashMap<Word,SetOfItems> moveFront(Relation_1 relation,HashMap<Word,SetOfItems> wordToItems) {
+            for (Pair pair : pairs) {
+                if (pair.dotPos != LRGrammar.getById(pair.idOfSentence).size()) {
+                    Word word = LRGrammar.getById(pair.idOfSentence).get(pair.dotPos);
+                    if (wordToItems.get(word)==null)
+                        wordToItems.put(word,new SetOfItems(nonTerm,pair.idOfSentence,pair.dotPos+1,pair.next));
+                    else
+                        wordToItems.get(word).addOriginal(nonTerm,pair.idOfSentence,pair.dotPos+1,pair.next);
+                }
+            }
+            return wordToItems;
+        }
+
+
+        @Override
+        public String toString() {
+            StringBuilder result = new StringBuilder();
+            for (Map.Entry<Nonterminal,ArrayList<Pair>> entryOfBS : relationSet.entrySet()) {
+                result.append(entryOfBS.getKey()).append(entryOfBS.getValue()).append("  ,  ");
+            }
+            return result.toString();
+        }
+
+
+                HashSet<Path> pathSet = new HashSet<>();
+                SetOfItems begin = new SetOfItems(LRGrammar.getStart(), LRGrammar.getBySentence(LRGrammar.getStart().derivation.get(0)),Terminal.end);
+                HashSet<SetOfItems> closureSet = new HashSet<>() {{add(begin);}};
+                LinkedList<SetOfItems> stack = new LinkedList<>() {{push(begin);}};
+                while (!stack.isEmpty()) {
+                    SetOfItems now = stack.pop();
+                    HashMap<Word,SetOfItems> wordToItems = new HashMap<>();
+                    for (Map.Entry<Nonterminal,ArrayList<Pair>> entryOfBS : now.relationSet.entrySet())
+                        now.moveFront(entryOfBS.getKey(), entryOfBS.getValue(),wordToItems);
+                    for (Map.Entry<Word,SetOfItems> entryOfWI : wordToItems.entrySet()) {
+                        Path path = new Path(now,entryOfWI.getValue(),entryOfWI.getKey());
+                        pathSet.add(path);
+                        if (closureSet.add(entryOfWI.getValue()))
+                            stack.push(entryOfWI.getValue());
+                    }
+                }

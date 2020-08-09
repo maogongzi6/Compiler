@@ -1,0 +1,38 @@
+int main() {
+    int[5][6] a;
+    int[5][7] c;
+    func(a,c);
+    if (a>c) {
+            int x;
+            int z;
+            int t;
+            int m;
+            int r;
+            x = z + t ;
+            z = z+t ;
+            if (r >= a) {
+            m = z + x ;
+            x = z + t ;
+            x = z + t ;
+                while (a==c) {
+                    int b;
+                    a = a + a;
+                    x = x + t ;
+                    b = z + t ;
+                }
+                x = x + x ;
+            }
+            else {x = z + t ;x = z + t ;a = t + c;}
+            x = z + t ;x = z + t ;x = z + t ;x = z + t ;x = z + t ;
+        }
+
+
+    return a;
+}
+
+void func(int[][6] b,int[][7] d) {int a;a = b;int c;
+if (a<c) {
+func(b,d);
+}
+return;
+}

@@ -1,0 +1,105 @@
+D:\jdk12\bin\java.exe -javaagent:C:\Users\Asus\AppData\Local\JetBrains\Toolbox\apps\IDEA-C\ch-0\192.6817.14\lib\idea_rt.jar=63902:C:\Users\Asus\AppData\Local\JetBrains\Toolbox\apps\IDEA-C\ch-0\192.6817.14\bin -Dfile.encoding=UTF-8 -classpath "D:\TestProgram\TestProgram_Java\Compilers\例4.32 LR(0)自动机\out\production\例4.32 LR(0)自动机;D:\TestProgram\TestProgram_Java\Compilers\commonJar\doubleWayMap.jar;D:\TestProgram\TestProgram_Java\Compilers\morphologyJar\DfaAndNfa.jar;D:\TestProgram\TestProgram_Java\Compilers\GrammarJar\grammar.jar;D:\TestProgram\TestProgram_Java\Compilers\LRJar\算法4.53 LR(1)构造方法.jar" LRGrammar
+E :
+E + T
+T
+T :
+T * F
+F
+F :
+( E )
+i
+IPSLON :
+ipslon
+S* :
+E
+firstMap:
+S*  : ( i
+T  : ( i
+F  : ( i
+E  : ( i
+followMap:
+S*  : $
+T  : ) * + $
+F  : ) * + $
+E  : ) + $
+idToSentence:
+E + T : 0
+T : 1
+T * F : 2
+F : 3
+( E ) : 4
+i : 5
+ipslon : 6
+E : 7
+
+
+T [[T  *  F  · ]]  ,   :
+
+AcceptItem  :
+
+T [[T  *  ·  F ]]  ,  F [[·  (  E  ) ], [·  i ]]  ,   :
+F :  T [[T  *  F  · ]]  ,
+( :  F [[(  ·  E  ) ], [·  (  E  ) ], [·  i ]]  ,  T [[·  T  *  F ], [·  F ]]  ,  E [[·  E  +  T ], [·  T ]]  ,
+i :  F [[i  · ]]  ,
+
+T [[T  ·  *  F ]]  ,  E [[T  · ]]  ,   :
+* :  T [[T  *  ·  F ]]  ,  F [[·  (  E  ) ], [·  i ]]  ,
+
+F [[(  E  ·  ) ]]  ,  E [[E  ·  +  T ]]  ,   :
+) :  F [[(  E  )  · ]]  ,
++ :  T [[·  T  *  F ], [·  F ]]  ,  F [[·  (  E  ) ], [·  i ]]  ,  E [[E  +  ·  T ]]  ,
+
+T [[·  T  *  F ], [·  F ]]  ,  F [[·  (  E  ) ], [·  i ]]  ,  E [[E  +  ·  T ]]  ,   :
+T :  T [[T  ·  *  F ]]  ,  E [[E  +  T  · ]]  ,
+F :  T [[F  · ]]  ,
+( :  F [[(  ·  E  ) ], [·  (  E  ) ], [·  i ]]  ,  T [[·  T  *  F ], [·  F ]]  ,  E [[·  E  +  T ], [·  T ]]  ,
+i :  F [[i  · ]]  ,
+
+T [[T  ·  *  F ]]  ,  E [[E  +  T  · ]]  ,   :
+* :  T [[T  *  ·  F ]]  ,  F [[·  (  E  ) ], [·  i ]]  ,
+
+S* [[E  · ]]  ,  E [[E  ·  +  T ]]  ,   :
++ :  T [[·  T  *  F ], [·  F ]]  ,  F [[·  (  E  ) ], [·  i ]]  ,  E [[E  +  ·  T ]]  ,
+$ :  AcceptItem
+
+S* [[·  E ]]  ,  T [[·  T  *  F ], [·  F ]]  ,  F [[·  (  E  ) ], [·  i ]]  ,  E [[·  E  +  T ], [·  T ]]  ,   :
+T :  T [[T  ·  *  F ]]  ,  E [[T  · ]]  ,
+F :  T [[F  · ]]  ,
+E :  S* [[E  · ]]  ,  E [[E  ·  +  T ]]  ,
+( :  F [[(  ·  E  ) ], [·  (  E  ) ], [·  i ]]  ,  T [[·  T  *  F ], [·  F ]]  ,  E [[·  E  +  T ], [·  T ]]  ,
+i :  F [[i  · ]]  ,
+
+F [[(  ·  E  ) ], [·  (  E  ) ], [·  i ]]  ,  T [[·  T  *  F ], [·  F ]]  ,  E [[·  E  +  T ], [·  T ]]  ,   :
+T :  T [[T  ·  *  F ]]  ,  E [[T  · ]]  ,
+F :  T [[F  · ]]  ,
+E :  F [[(  E  ·  ) ]]  ,  E [[E  ·  +  T ]]  ,
+( :  F [[(  ·  E  ) ], [·  (  E  ) ], [·  i ]]  ,  T [[·  T  *  F ], [·  F ]]  ,  E [[·  E  +  T ], [·  T ]]  ,
+i :  F [[i  · ]]  ,
+
+F [[i  · ]]  ,   :
+
+F [[(  E  )  · ]]  ,   :
+
+T [[F  · ]]  ,   :
+
+[1]
+actionMap:
+0:  {) =infer: T  2, * =infer: T  2, + =infer: T  2, $ =infer: T  2}
+2:  {( =moveTo: 9, i =moveTo: 10}
+3:  {) =infer: E  1, * =moveTo: 2, + =infer: E  1, $ =infer: E  1}
+4:  {) =moveTo: 11, + =moveTo: 5}
+5:  {( =moveTo: 9, i =moveTo: 10}
+6:  {) =infer: E  0, * =moveTo: 2, + =infer: E  0, $ =infer: E  0}
+7:  {+ =moveTo: 5, $ =accept}
+8:  {( =moveTo: 9, i =moveTo: 10}
+9:  {( =moveTo: 9, i =moveTo: 10}
+10:  {) =infer: F  5, * =infer: F  5, + =infer: F  5, $ =infer: F  5}
+11:  {) =infer: F  4, * =infer: F  4, + =infer: F  4, $ =infer: F  4}
+12:  {) =infer: T  3, * =infer: T  3, + =infer: T  3, $ =infer: T  3}
+gotoMap:
+2:  {F =goto: 0}
+5:  {T =goto: 6, F =goto: 12}
+8:  {T =goto: 3, F =goto: 12, E =goto: 7}
+9:  {T =goto: 3, F =goto: 12, E =goto: 4}
+
+Process finished with exit code 0

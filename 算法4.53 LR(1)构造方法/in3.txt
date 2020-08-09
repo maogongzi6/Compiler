@@ -1,0 +1,11 @@
+int main() {
+
+            int x;
+            int z;
+            int t;
+            x = z + t ;x = z + t ;x = z + t ;x = z + t ;x = z + t ;
+
+
+
+    return 0;
+}

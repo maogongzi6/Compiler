@@ -1,0 +1,28 @@
+FUNC
+PUSH 5
+LDR ebx,0
+PUSH ebx
+LDR ecx,120
+PUSH ecx
+GOTO edx
+POP ebx
+POP ecx
+RESET 260
+POP edx
+POP eax
+FUNC
+PUSH 15
+LDR ecx,0
+PUSH ecx
+LDR edx,8
+PUSH edx
+GOTO eax
+POP ebx
+POP ecx
+LDR_T edx,8
+STO_T 0,edx
+RESET -16
+PUSH 0
+LDR_T ebx
+GOTO ebx
+RET

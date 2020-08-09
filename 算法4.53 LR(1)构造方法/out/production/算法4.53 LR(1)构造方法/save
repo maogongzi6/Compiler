@@ -1,0 +1,165 @@
+    if (a>c) {
+        int x;
+        int z;
+        int t;
+        x = z + t ;
+        if (r >= a) {
+            while ((a != c)&&true||false||!false) {
+                a = a + a;
+            }
+        }
+        else {a = t + c;}
+    }
+
+void func (int m) {m = n + c;}
+
+
+    int[19][30] t;
+    int[10] x;
+    int as;
+    int[25] z;
+    int[40] m;
+    t[1][3] = (x[as+m[5]] + z[14])*35;
+    {
+        int x;
+        z[1]=x;
+    }
+
+
+int x;
+b[1][1] = b[1][1]+d[1][2]; return;
+
+ActiveTable{table='
+{SymbolRecord{identify=a, type=120, offset=0}=ifActive=true, line=7}
+, StretchRecord@3dd3bcd=ifActive=true, line=null}
+, SymbolRecord{identify=c, type=140, offset=120}=ifActive=true, line=7}
+, Temp{type=Type@6276ae34, num=0}=ifActive=false, line=null}
+, StretchRecord@97e1986=ifActive=true, line=null}
+}}
+ActiveTable{table='
+{SymbolRecord{identify=a, type=120, offset=0}=ifActive=true, line=13}
+, Temp{type=Type$IntegerType@7946e1f4, num=1}=ifActive=false, line=null}
+, SymbolRecord{identify=r, type=4, offset=276}=ifActive=true, line=13}
+, SymbolRecord{identify=t, type=4, offset=268}=ifActive=true, line=9}
+, SymbolRecord{identify=x, type=4, offset=260}=ifActive=false, line=null}
+, SymbolRecord{identify=z, type=4, offset=264}=ifActive=true, line=9}
+, Temp{type=Type$IntegerType@7946e1f4, num=2}=ifActive=false, line=null}
+}}
+ActiveTable{table='
+{SymbolRecord{identify=t, type=4, offset=268}=ifActive=true, line=17}
+, Temp{type=Type$IntegerType@7946e1f4, num=3}=ifActive=false, line=null}
+, SymbolRecord{identify=x, type=4, offset=260}=ifActive=true, line=15}
+, Temp{type=Type$IntegerType@7946e1f4, num=4}=ifActive=false, line=null}
+, SymbolRecord{identify=z, type=4, offset=264}=ifActive=true, line=15}
+, SymbolRecord{identify=m, type=4, offset=272}=ifActive=false, line=null}
+, Temp{type=Type$IntegerType@7946e1f4, num=5}=ifActive=false, line=null}
+}}
+ActiveTable{table='
+{SymbolRecord{identify=a, type=120, offset=0}=ifActive=true, line=21}
+, SymbolRecord{identify=c, type=140, offset=120}=ifActive=true, line=21}
+}}
+ActiveTable{table='
+{Temp{type=Type$IntegerType@7946e1f4, num=8}=ifActive=false, line=null}
+, SymbolRecord{identify=a, type=120, offset=0}=ifActive=true, line=23}
+, SymbolRecord{identify=b, type=4, offset=280}=ifActive=false, line=null}
+, SymbolRecord{identify=t, type=4, offset=268}=ifActive=true, line=25}
+, SymbolRecord{identify=x, type=4, offset=260}=ifActive=true, line=25}
+, SymbolRecord{identify=z, type=4, offset=264}=ifActive=true, line=27}
+, Temp{type=Type$IntegerType@7946e1f4, num=7}=ifActive=false, line=null}
+, Temp{type=Type$IntegerType@7946e1f4, num=6}=ifActive=false, line=null}
+}}
+ActiveTable{table='
+{SymbolRecord{identify=x, type=4, offset=260}=ifActive=true, line=30}
+, Temp{type=Type$IntegerType@7946e1f4, num=9}=ifActive=false, line=null}
+}}
+ActiveTable{table='
+{SymbolRecord{identify=a, type=120, offset=0}=ifActive=false, line=null}
+, SymbolRecord{identify=c, type=140, offset=120}=ifActive=true, line=37}
+, SymbolRecord{identify=t, type=4, offset=268}=ifActive=true, line=33}
+, SymbolRecord{identify=x, type=4, offset=260}=ifActive=false, line=null}
+, Temp{type=Type$IntegerType@7946e1f4, num=12}=ifActive=false, line=null}
+, SymbolRecord{identify=z, type=4, offset=264}=ifActive=true, line=33}
+, Temp{type=Type$IntegerType@7946e1f4, num=10}=ifActive=false, line=null}
+, Temp{type=Type$IntegerType@7946e1f4, num=11}=ifActive=false, line=null}
+}}
+ActiveTable{table='
+{Temp{type=Type$IntegerType@7946e1f4, num=16}=ifActive=false, line=null}
+, Temp{type=Type$IntegerType@7946e1f4, num=14}=ifActive=false, line=null}
+, SymbolRecord{identify=t, type=4, offset=268}=ifActive=true, line=39}
+, SymbolRecord{identify=x, type=4, offset=260}=ifActive=false, line=null}
+, Temp{type=Type$IntegerType@7946e1f4, num=15}=ifActive=false, line=null}
+, SymbolRecord{identify=z, type=4, offset=264}=ifActive=true, line=39}
+, Temp{type=Type$IntegerType@7946e1f4, num=17}=ifActive=false, line=null}
+, Temp{type=Type$IntegerType@7946e1f4, num=13}=ifActive=false, line=null}
+}}
+ActiveTable{table='
+{Temp{type=Stretch@3c09711b, num=18}=ifActive=false, line=null}
+, Temp{type=Stretch@3c09711b, num=19}=ifActive=false, line=null}
+}}
+ActiveTable{table='
+{SymbolRecord{identify=a, type=4, offset=16}=ifActive=false, line=null}
+, SymbolRecord{identify=b, type=8, offset=0}=ifActive=true, line=59}
+, SymbolRecord{identify=d, type=8, offset=8}=ifActive=true, line=null}
+}}
+
+[Msil{0  func='func', result=null, param_1=null, param_2=null}
+, Msil{1  func='push', result=null, param_1=null, param_2=ConstantInt{value=5}}
+, Msil{2  func='push', result=null, param_1=null, param_2=StretchRecord@3dd3bcd}
+, Msil{3  func='push', result=null, param_1=null, param_2=StretchRecord@97e1986}
+, Msil{4  func='goto', result=ConstantInt{value=56}, param_1=null, param_2=null}
+, Msil{5  func='pop', result=ConstantInt{value=0}, param_1=null, param_2=null}
+, Msil{6  func='pop', result=Temp{type=Type@6276ae34, num=0}, param_1=null, param_2=null}
+, Msil{7  func='>', result=ConstantInt{value=9}, param_1=SymbolRecord{identify=a, type=120, offset=0}, param_2=SymbolRecord{identify=c, type=140, offset=120}}
+, Msil{8  func='goto', result=ConstantInt{value=49}, param_1=null, param_2=null}
+, Msil{9  func='+', result=Temp{type=Type$IntegerType@7946e1f4, num=1}, param_1=SymbolRecord{identify=z, type=4, offset=264}, param_2=SymbolRecord{identify=t, type=4, offset=268}}
+, Msil{10  func='assign', result=SymbolRecord{identify=x, type=4, offset=260}, param_1=Temp{type=Type$IntegerType@7946e1f4, num=1}, param_2=null}
+, Msil{11  func='+', result=Temp{type=Type$IntegerType@7946e1f4, num=2}, param_1=SymbolRecord{identify=z, type=4, offset=264}, param_2=SymbolRecord{identify=t, type=4, offset=268}}
+, Msil{12  func='assign', result=SymbolRecord{identify=z, type=4, offset=264}, param_1=Temp{type=Type$IntegerType@7946e1f4, num=2}, param_2=null}
+, Msil{13  func='>=', result=ConstantInt{value=15}, param_1=SymbolRecord{identify=r, type=4, offset=276}, param_2=SymbolRecord{identify=a, type=120, offset=0}}
+, Msil{14  func='goto', result=ConstantInt{value=33}, param_1=null, param_2=null}
+, Msil{15  func='+', result=Temp{type=Type$IntegerType@7946e1f4, num=3}, param_1=SymbolRecord{identify=z, type=4, offset=264}, param_2=SymbolRecord{identify=x, type=4, offset=260}}
+, Msil{16  func='assign', result=SymbolRecord{identify=m, type=4, offset=272}, param_1=Temp{type=Type$IntegerType@7946e1f4, num=3}, param_2=null}
+, Msil{17  func='+', result=Temp{type=Type$IntegerType@7946e1f4, num=4}, param_1=SymbolRecord{identify=z, type=4, offset=264}, param_2=SymbolRecord{identify=t, type=4, offset=268}}
+, Msil{18  func='assign', result=SymbolRecord{identify=x, type=4, offset=260}, param_1=Temp{type=Type$IntegerType@7946e1f4, num=4}, param_2=null}
+, Msil{19  func='+', result=Temp{type=Type$IntegerType@7946e1f4, num=5}, param_1=SymbolRecord{identify=z, type=4, offset=264}, param_2=SymbolRecord{identify=t, type=4, offset=268}}
+, Msil{20  func='assign', result=SymbolRecord{identify=x, type=4, offset=260}, param_1=Temp{type=Type$IntegerType@7946e1f4, num=5}, param_2=null}
+, Msil{21  func='==', result=ConstantInt{value=23}, param_1=SymbolRecord{identify=a, type=120, offset=0}, param_2=SymbolRecord{identify=c, type=140, offset=120}}
+, Msil{22  func='goto', result=ConstantInt{value=30}, param_1=null, param_2=null}
+, Msil{23  func='+', result=Temp{type=Type$IntegerType@7946e1f4, num=6}, param_1=SymbolRecord{identify=a, type=120, offset=0}, param_2=SymbolRecord{identify=a, type=120, offset=0}}
+, Msil{24  func='assign', result=SymbolRecord{identify=a, type=120, offset=0}, param_1=Temp{type=Type$IntegerType@7946e1f4, num=6}, param_2=null}
+, Msil{25  func='+', result=Temp{type=Type$IntegerType@7946e1f4, num=7}, param_1=SymbolRecord{identify=x, type=4, offset=260}, param_2=SymbolRecord{identify=t, type=4, offset=268}}
+, Msil{26  func='assign', result=SymbolRecord{identify=x, type=4, offset=260}, param_1=Temp{type=Type$IntegerType@7946e1f4, num=7}, param_2=null}
+, Msil{27  func='+', result=Temp{type=Type$IntegerType@7946e1f4, num=8}, param_1=SymbolRecord{identify=z, type=4, offset=264}, param_2=SymbolRecord{identify=t, type=4, offset=268}}
+, Msil{28  func='assign', result=SymbolRecord{identify=b, type=4, offset=280}, param_1=Temp{type=Type$IntegerType@7946e1f4, num=8}, param_2=null}
+, Msil{29  func='goto', result=ConstantInt{value=21}, param_1=null, param_2=null}
+, Msil{30  func='+', result=Temp{type=Type$IntegerType@7946e1f4, num=9}, param_1=SymbolRecord{identify=x, type=4, offset=260}, param_2=SymbolRecord{identify=x, type=4, offset=260}}
+, Msil{31  func='assign', result=SymbolRecord{identify=x, type=4, offset=260}, param_1=Temp{type=Type$IntegerType@7946e1f4, num=9}, param_2=null}
+, Msil{32  func='goto', result=ConstantInt{value=39}, param_1=null, param_2=null}
+, Msil{33  func='+', result=Temp{type=Type$IntegerType@7946e1f4, num=10}, param_1=SymbolRecord{identify=z, type=4, offset=264}, param_2=SymbolRecord{identify=t, type=4, offset=268}}
+, Msil{34  func='assign', result=SymbolRecord{identify=x, type=4, offset=260}, param_1=Temp{type=Type$IntegerType@7946e1f4, num=10}, param_2=null}
+, Msil{35  func='+', result=Temp{type=Type$IntegerType@7946e1f4, num=11}, param_1=SymbolRecord{identify=z, type=4, offset=264}, param_2=SymbolRecord{identify=t, type=4, offset=268}}
+, Msil{36  func='assign', result=SymbolRecord{identify=x, type=4, offset=260}, param_1=Temp{type=Type$IntegerType@7946e1f4, num=11}, param_2=null}
+, Msil{37  func='+', result=Temp{type=Type$IntegerType@7946e1f4, num=12}, param_1=SymbolRecord{identify=t, type=4, offset=268}, param_2=SymbolRecord{identify=c, type=140, offset=120}}
+, Msil{38  func='assign', result=SymbolRecord{identify=a, type=120, offset=0}, param_1=Temp{type=Type$IntegerType@7946e1f4, num=12}, param_2=null}
+, Msil{39  func='+', result=Temp{type=Type$IntegerType@7946e1f4, num=13}, param_1=SymbolRecord{identify=z, type=4, offset=264}, param_2=SymbolRecord{identify=t, type=4, offset=268}}
+, Msil{40  func='assign', result=SymbolRecord{identify=x, type=4, offset=260}, param_1=Temp{type=Type$IntegerType@7946e1f4, num=13}, param_2=null}
+, Msil{41  func='+', result=Temp{type=Type$IntegerType@7946e1f4, num=14}, param_1=SymbolRecord{identify=z, type=4, offset=264}, param_2=SymbolRecord{identify=t, type=4, offset=268}}
+, Msil{42  func='assign', result=SymbolRecord{identify=x, type=4, offset=260}, param_1=Temp{type=Type$IntegerType@7946e1f4, num=14}, param_2=null}
+, Msil{43  func='+', result=Temp{type=Type$IntegerType@7946e1f4, num=15}, param_1=SymbolRecord{identify=z, type=4, offset=264}, param_2=SymbolRecord{identify=t, type=4, offset=268}}
+, Msil{44  func='assign', result=SymbolRecord{identify=x, type=4, offset=260}, param_1=Temp{type=Type$IntegerType@7946e1f4, num=15}, param_2=null}
+, Msil{45  func='+', result=Temp{type=Type$IntegerType@7946e1f4, num=16}, param_1=SymbolRecord{identify=z, type=4, offset=264}, param_2=SymbolRecord{identify=t, type=4, offset=268}}
+, Msil{46  func='assign', result=SymbolRecord{identify=x, type=4, offset=260}, param_1=Temp{type=Type$IntegerType@7946e1f4, num=16}, param_2=null}
+, Msil{47  func='+', result=Temp{type=Type$IntegerType@7946e1f4, num=17}, param_1=SymbolRecord{identify=z, type=4, offset=264}, param_2=SymbolRecord{identify=t, type=4, offset=268}}
+, Msil{48  func='assign', result=SymbolRecord{identify=x, type=4, offset=260}, param_1=Temp{type=Type$IntegerType@7946e1f4, num=17}, param_2=null}
+, Msil{49  func='load', result=Temp{type=Stretch@3c09711b, num=18}, param_1=ConstantInt{value=0}, param_2=null}
+, Msil{50  func='reset', result=ConstantInt{value=-260}, param_1=null, param_2=null}
+, Msil{51  func='push', result=null, param_1=null, param_2=ConstantInt{value=4}}
+, Msil{52  func='load', result=Temp{type=Stretch@3c09711b, num=19}, param_1=ConstantInt{value=260}, param_2=null}
+, Msil{53  func='push', result=null, param_1=null, param_2=Temp{type=Stretch@3c09711b, num=19}}
+, Msil{54  func='goto', result=Temp{type=Stretch@3c09711b, num=18}, param_1=null, param_2=null}
+, Msil{55  func='ret', result=null, param_1=null, param_2=null}
+, Msil{56  func='reset', result=ConstantInt{value=260}, param_1=null, param_2=null}
+, Msil{57  func='pop', result=SymbolRecord{identify=d, type=8, offset=8}, param_1=null, param_2=null}
+, Msil{58  func='pop', result=SymbolRecord{identify=b, type=8, offset=0}, param_1=null, param_2=null}
+, Msil{59  func='assign', result=SymbolRecord{identify=a, type=4, offset=16}, param_1=SymbolRecord{identify=b, type=8, offset=0}, param_2=null}
+]
