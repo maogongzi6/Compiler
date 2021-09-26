@@ -1,3 +1,6 @@
+//<T>表示T为一个非终结符，[t]表示t为一个终结符，{func_1}表示一个动作，$表示或，~表示生成
+//<T>~[:]<X> $ [a][b]{func_1} 表示<T>生成[:]<X> 或 [a][b]{func_1}，其中func_1对应 <T> 的同名java类T.java中的func_1方法中的动作
+
 <Main>~<FunctionList>
 <FunctionList>~<FunctionList><Function> $ <Function>
 <Function>~<ReturnType>[identity]{func_1}[(]<ParameterList>[)]<FunctionBrace>{func_3}$[int] [main] [(][)] <FunctionBrace>
